@@ -1,0 +1,307 @@
+﻿
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Design em 4 minutos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:url" content="http://jgthms.com/web-design-in-4-minutes/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Web Design em 4 minutos">
+    <meta property="og:description" content="Learn the basics of web design em 4 minutos with this interactive tutorial.">
+    <meta property="og:image" content="http://jgthms.com/web-design-in-4-minutes/web-design-in-4-minutes.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jgthms">
+    <meta name="twitter:creator" content="@jgthms">
+    <meta name="twitter:title" content="Web Design em 4 minutos">
+    <meta name="twitter:description" content="Learn the basics of web design em 4 minutos with this interactive tutorial.">
+    <meta name="twitter:image" content="http://jgthms.com/web-design-in-4-minutes/web-design-in-4-minutes.png">
+
+    <link rel="stylesheet" type="text/css" href="website.css">
+  </head>
+  <body>
+    <header id="header">
+      <img id="logo" src="jt.png" alt="JT logo">
+      <h1>Web Design em 4 minutos</h1>
+      <p>
+        <a href="http://jgthms.com" target="_blank">por Jeremy Thomas</a><br>
+        <a href="http://github.com/alexmoreno" target="_blank">tradução por Alex Moreno</a>
+      </p>
+    </header>
+
+    <main>
+      <section id="start">
+        <p>Vamos supor que você tem um produto, um portfólio, ou apenas uma ideia que você quer compartilhar com todo mundo no seu  <em>próprio</em> website. Antes de publicá-lo na internet, você quer o tornar atraente, profissional, ou pelo menos algo <em>decente</em> de se olhar</p>
+        <p>Qual é a <a class="step" data-step="0" href="#content">primeira coisa</a> que você precisa trabalhar?</p>
+      </section>
+
+      <section id="content">
+        <h2>Conteúdo</h2>
+        <p>O propósito do  <strong>design</strong> é melhorar a apresentação do conteúdo em que está aplicado. Pode parecer óbvio, mas o conteúdo deve ser o elemento <strong>primário</strong> do site, não deve ser deixado como segundo plano.</p>
+        <p>Conteúdo escrito, como esse parágrafo que você está lendo nesse momento, compõe mais de 90% da Internet. Estilizar esse conteúdo de texto vai ser um longo caminho.</p>
+        <p>Vamos supor que você já terminou o conteúdo que quer publicar, e acabou de criar um <code>style.css</code> vazio, qual é a <a class="step" data-step="1" href="#centering">primeira regra</a> que você vai escrever?</p>
+      </section>
+
+      <section id="centering">
+        <h2>Centralização</h2>
+        <p>Linhas longas de texto podem ser difíceis de analisar, o que acaba as tornando difíceis de <strong>ler</strong>. Determinar um limite de caracteres por linha melhora bastante a legibilidade e o apelo de um textão.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">margin</span>: <span class="number">0</span> auto;
+  <span class="attribute">max-width</span>: <span class="number">50</span><span class="unit">em</span>;
+}</pre>
+        <p>Depois de estilizar os <em>blocos</em> de texto, o que acha de estilizar o <a class="step" data-step="2" href="#font-family">texto propriamente dito</a>?</p>
+      </section>
+
+      <section id="font-family">
+        <h2>Font family</h2>
+        <p>A fonte default do navegador é <code>"Times"</code>, o que pode deixar com uma cara não-atrativa (principalmente por ser uma fonte sem estilo). Fazer a mudança para uma fonte <strong>sans-serif</strong> como a <code>"Helvetica"</code> ou <code>"Arial"</code> pode melhorar muito o visual da sua página.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">font-family</span>: <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+}</pre>
+        <p><em>Se optar por uma fonte serifada, tente a <code>"Georgia"</code>.</em></p>
+        <p>Esse procedimento deixa a fonte mais <em>atraente</em>, agora vamos torná-la <a class="step" data-step="3" href="#spacing">mais legível</a>.</p>
+      </section>
+
+      <section id="spacing">
+        <h2>Espaçameto</h2>
+        <p>Quando uma página parece meio "quebrada" para um usuário, geralmente é problema com <strong>espaçamento</strong>. Colocar um espaçamento por fora e por dentro do seu conteúdo aumenta o apelo da sua página.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">line-height</span>: <span class="number">1.5</span>;
+  <span class="attribute">padding</span>: <span class="number">4</span><span class="unit">em</span> <span class="number">1</span><span class="unit">em</span>;
+}
+
+<span class="selector">h2</span> {
+  <span class="attribute">margin-top</span>: <span class="number">1</span><span class="unit">em</span>;
+  <span class="attribute">padding-top</span>: <span class="number">1</span><span class="unit">em</span>;
+}</pre>
+        <p>Esse layout já melhorou bastante, mas vamos continuar aplicando mais algumas <a class="step" data-step="4" href="#color-contrast">mudanças sutis</a>.</p>
+      </section>
+
+      <section id="color-contrast">
+        <h2>Cor &amp; Contraste</h2>
+        <p>Texto preto num fundo branco é de doer os olhos. Optar por um tom mais suave de preto para o texto deixa a página mais <strong>confortável</strong> de se ler.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">color</span>: <span class="number">#555</span>;
+}</pre>
+        <p>E para manter um nível bacana de <strong>contraste</strong>, vamos pegar um tom mais escuro para palavras <strong>importantes</strong></p>
+<pre><span class="selector">h1</span>,
+<span class="selector">h2</span>,
+<span class="selector">strong</span> {
+  <span class="attribute">color</span>: <span class="number">#333</span>;
+}</pre>
+        <p>Boa parte da página melhorou visualmente, mas alguns elementos (como os pedacinhos de código) ainda parecem <a class="step" data-step="5" href="#balance">deslocados</a>.</p>
+      </section>
+
+      <section id="balance">
+        <h2>Equilíbrio</h2>
+        <p>Pra corrigir o equilíbrio da página, só precisamos de alguns pequenos toques:</p>
+<pre><span class="selector">code</span>,
+<span class="selector">pre</span> {
+  <span class="attribute">background</span>: <span class="number">#eee</span>;
+}
+
+<span class="selector">code</span> {
+  <span class="attribute">padding</span>: <span class="number">2</span>px <span class="number">4</span>px;
+  <span class="attribute">vertical-align</span>: text-bottom;
+}
+
+<span class="selector">pre</span> {
+  <span class="attribute">padding</span>: <span class="number">1</span>em;
+}</pre>
+        <p>A essa altura do campeonato, você pode querer fazer sua página se destacar e dar uma <a class="step" data-step="6" href="#primary-color">identidade</a> a ela.</p>
+      </section>
+
+      <section id="primary-color">
+        <h2>Cor primária</h2>
+        <p>A maioria das marcas possui uma  <strong>cor primária</strong> que age como uma expressão visual. Em um site, essa expressão pode ser usada para dar ênfase a elementos interativos, como <strong>links</strong> .</p>
+<pre><span class="selector">a</span> {
+  <span class="attribute">color</span>: <span class="number">#e81c4f</span>;
+}</pre>
+        <p>Mas para manter o equilíbrio, vamos precisar de umas  <a class="step" data-step="7" href="#secondary-colors">cores adicionais</a>.</p>
+      </section>
+
+      <section id="secondary-colors">
+        <h2>Cores secundárias</h2>
+        <p>A cor predominante pode ser complementada com alguns <em>tons</em> sutis, usado em bordas, planos de fundo, ou até no corpo do texto.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">color</span>: <span class="number">#566b78</span>;
+}
+
+<span class="selector">code</span>,
+<span class="selector">pre</span> {
+  <span class="attribute">background</span>: <span class="number">#f5f7f9</span>;
+  <span class="attribute">border-bottom</span>: <span class="number">1</span><span class="unit">px</span> solid <span class="number">#d8dee9</span>;
+  <span class="attribute">color</span>: <span class="number">#a7adba</span>;
+}
+
+<span class="selector">pre</span> {
+  <span class="attribute">border-left</span>: <span class="number">2</span><span class="unit">px</span> solid <span class="number">#69c</span>;
+}</pre>
+        <p>Se mudamos os tons, por que não mudar as  <a class="step" data-step="8" href="#custom-font">formas</a>...</p>
+      </section>
+
+      <section id="custom-font">
+        <h2>Fontes customizadas</h2>
+        <p>Já que o texto é o conteúdo principal de uma página, usar uma <strong>fonte customizada</strong> dá para a página uma identidade ainda mais notável.</p>
+        <p>Você pode colocar sua própria fonte customizada ou usar algum serviço online tipo o  <a href="https://typekit.com" target="_blank">Typekit</a>, mas aqui vamos usar  <code>"Roboto"</code> do <a href="https://fonts.google.com" target="_blank">Google Fonts</a>, que é um serviço gratuito.</p>
+<pre><span class="keyword">@import</span> <span class="string">'https://fonts.googleapis.com/css?family=Roboto:300,400,500'</span>;
+
+<span class="selector">body</span> {
+  <span class="attribute">font-family</span>: <span class="string">"Roboto"</span>, <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+}</pre>
+        <p>Depois de melhorar a identidade do <em>texto</em>, que tal adicionar algumas <a class="step" data-step="9" href="#images">mil palavras</a>...</p>
+      </section>
+
+      <section id="images">
+        <h2>
+          <img src="images.png" alt="Spongebob rainbow meme saying 'Images'">
+        </h2>
+        <p>Gráficos e ícones podem ser usados tanto para ornar seu conteúdo, quanto para fazer parte de forma ativa na mensagem que você quer passar.</p>
+        <p>Vamos melhorar nosso cabeçalho com uma  <strong>imagem de background</strong> do <a href="https://unsplash.com/photos/qH36EgNjPJY" target="_blank">Unsplash</a></p>
+<pre><span class="selector">header</span> {
+  <span class="attribute">background-color</span>: <span class="number">#263d36</span>;
+  <span class="attribute">background-image</span>: url(<span class="string">"header.jpg"</span>);
+  <span class="attribute">background-position</span>: center top;
+  <span class="attribute">background-repeat</span>: no-repeat;
+  <span class="attribute">background-size</span>: cover;
+  <span class="attribute">line-height</span>: <span class="number">1.2</span>;
+  <span class="attribute">padding</span>: <span class="number">10</span><span class="unit">vw</span> <span class="number">2</span><span class="unit">em</span>;
+  <span class="attribute">text-align</span>: center;
+}</pre>
+        <p>Vamos por também uma <strong>logo</strong></p>
+<pre><span class="selector">header img</span> {
+  <span class="attribute">display</span>: inline-block;
+  <span class="attribute">height</span>: <span class="number">120</span><span class="unit">px</span>;
+  <span class="attribute">vertical-align</span>: top;
+  <span class="attribute">width</span>: <span class="number">120</span><span class="unit">px</span>;
+}</pre>
+        <p>Aproveitando aqui e melhorando os estilos dos textos</p>
+<pre><span class="selector">header h1</span> {
+  <span class="attribute">color</span>: white;
+  <span class="attribute">font-size</span>: <span class="number">2.5</span><span class="unit">em</span>;
+  <span class="attribute">font-weight</span>: <span class="number">300</span>;
+}
+
+<span class="selector">header a</span> {
+  <span class="attribute">border</span>: <span class="number">1</span><span class="unit">px</span> solid <span class="number">#e81c4f</span>;
+  <span class="attribute">border-radius</span>: <span class="number">290486</span><span class="unit">px</span>;
+  <span class="attribute">color</span>: white;
+  <span class="attribute">font-size</span>: <span class="number">0.6</span><span class="unit">em</span>;
+  <span class="attribute">letter-spacing</span>: <span class="number">0.2</span><span class="unit">em</span>;
+  <span class="attribute">padding</span>: <span class="number">1</span><span class="unit">em</span> <span class="number">2</span><span class="unit">em</span>;
+  <span class="attribute">text-transform</span>: uppercase;
+  <span class="attribute">text-decoration</span>: none;
+  <span class="attribute">transition</span>: none <span class="number">200</span><span class="unit">ms</span> ease-out;
+  <span class="attribute">transition-property</span>: color, background;
+}
+
+<span class="selector">header a:hover</span> {
+  <span class="attribute">background</span>:  <span class="number">#e81c4f</span>;
+  <span class="attribute">color</span>: white;
+}</pre>
+        <p><a href="#header">E voil&agrave;</a>!</p>
+        <p>Fizemos o layout de uma página decente em apenas alguns minutos, seguindo princípios básicos do web design. Tem só  <a class="step" data-step="10" href="#share">uma última coisinha</a> que falta fazer...</p>
+      </section>
+
+      <section id="share">
+        <h2>Compartilhe com amor!</h2>
+        <nav class="buttons">
+          <a class="button github" href="https://github.com/jgthms/web-design-in-4-minutes" target="_blank">
+            <em>Baixe no </em> <strong>GitHub</strong>
+          </a>
+          <a
+            class="button facebook"
+            href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fjgthms.com%2Fweb-design-in-4-minutes%2F"
+            rel="nofollow"
+            target="_blank"
+            >
+            <em>Compartilhe no </em> <strong>Facebook</strong>
+          </a>
+          <a
+            class="button twitter"
+            data-social-network="Twitter"
+            data-social-action="tweet"
+            data-social-target="http://jgthms.com/web-design-in-4-minutes/"
+            href="https://twitter.com/intent/tweet?text=Web%20Design%20in%204%20minutes&url=http%3A%2F%2Fjgthms.com%2Fweb-design-in-4-minutes%2F&via=jgthms"
+            rel="nofollow"
+            target="_blank"
+            >
+            <em>Compartilhe no </em> <strong>Twitter</strong>
+          </a>
+        </nav>
+        <p>Se você quer aprender sobre web design, confira o  <a href="http://marksheet.io" target="_blank"><strong>MarkSheet</strong>, meus tutoriais gratuitos de HTML e CSS</a>.<br>
+        Ou se você já quer começar direto, dá uma olhada no  <a href="http://bulma.io" target="_blank"><strong>Bulma</strong>, meu framework de CSS baseado no Flexbox</a>.</p>
+        <p>Obrigado por ler!</p>
+      </section>
+
+      <footer>
+        <a class="button" href="https://twitter.com/jgthms" target="_blank">Feito por <strong>@jgthms</strong></a>
+        <a class="button" href="https://github.com/alexmoreno" target="_blank">Traduzido por <strong>@alexmorenodev</strong></a>
+      </footer>
+    </main>
+
+    <a id="visited" href="#share">Já te vi por aqui antes. Quer ir logo pro final?</a>
+
+<script type="text/javascript">
+var steps = document.querySelectorAll('.step');
+var body = document.querySelector('body');
+var html = document.querySelector('html');
+
+for (var i=0; i < steps.length; i++) {
+  var element = steps[i];
+  element.onclick = function(event) {
+    var number = this.dataset.step;
+    var target = this.href;
+    addStep(number, target);
+  }
+};
+
+function removeVisited() {
+  if (document.getElementById('visited')) {
+    body.removeChild(document.getElementById('visited'));
+  }
+}
+
+function addStep(number, target) {
+  html.className += ' step' + number;
+
+  removeVisited();
+
+  if (target !== '') {
+    var id = target.split('#')[1];
+    document.getElementById(id).className = 'animate';
+  }
+
+  if (number === '7') {
+    loadGoogleFont();
+  }
+}
+
+visited.onclick = function() {
+  loadGoogleFont();
+  for (var i=0; i < 11; i++) {
+    html.className += ' step' + i;
+  }
+  removeVisited();
+}
+
+WebFontConfig = {
+  google: {
+    families: ['Roboto:300,400,500']
+  }
+};
+
+function loadGoogleFont() {
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+}
+</script>
+  </body>
+</html>
